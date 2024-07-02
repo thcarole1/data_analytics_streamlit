@@ -12,7 +12,6 @@ st.markdown(
     """
 )
 
-
 uploaded_file = st.file_uploader("Upload a json file")
 
 if uploaded_file is not None:
@@ -36,5 +35,6 @@ data = bytes_data
 r = requests.post(url = URL, files = {'upload_file': data})
 
 st.write(f"## Ranking of applicants based of probability to stay with the company:")
-content = json.loads(r.text)
-st.write(content)
+ranking = json.loads(r.text)
+ranking_df = pd.DataFrame(ranking['Ranking'])
+st.write(ranking_df)
