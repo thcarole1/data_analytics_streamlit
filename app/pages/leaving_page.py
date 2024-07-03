@@ -23,7 +23,7 @@ if uploaded_file is not None:
     st.write(X)
 
     # api-endpoint
-    URL = "https://hrdataanalytics-4bdr2jy2qa-od.a.run.app//upload_predict_leaving"
+    URL = "https://hrdataanalytics-4bdr2jy2qa-od.a.run.app/upload_predict_leaving"
 
     # defining a params dict for the parameters to be sent to the API
     data = bytes_data
